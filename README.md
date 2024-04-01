@@ -18,7 +18,7 @@ Whether you're looking to enhance operational efficiency, optimize product devel
 - OPENAI_API_KEY (Optional): OpenAI API Key
 
 #### How to resister environment content:
-- <URL of index path>
+- [Hown to resister environment content](https://towningtek.github.io/LLMTwins/)
 
 ## Installation
 ```bash=
@@ -47,14 +47,11 @@ uvicorn server:app --host 0.0.0.0 --port 8000 --reload
 Object foo(Object)
 ```
 
-## Demo Site
+## Demo
 
-#### Frontend:
+#### API test:
+- [Demo APIs on Youtube]((https://youtu.be/VLM60VusPl4))
 
 #### LLM Profile:
+- [Profile on GoogleSheet (Template)](https://docs.google.com/spreadsheets/d/1sIHUNWrziA82znQW9X6zuI9F163pS_XmqzejPyY-gg8/edit?usp=sharing)
 - [Profile on GoogleSheet](https://docs.google.com/spreadsheets/d/10QVQ7MH9GKMDQv6dEr_6qGA3LHYLyXOgWTvM6GKzuK4/edit?usp=sharing)
-
-## TODO
-1. 授權
-2. callback
-3. template 不穩定
