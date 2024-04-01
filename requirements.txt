@@ -1,0 +1,10 @@
+python-dotenv
+pygsheets
+python-dotenv
+fastapi
+uvicorn
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+langchain
+langchain-openai
