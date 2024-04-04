@@ -122,21 +122,16 @@ async def intent_recognition(prompt: prompt):
 
     return {"result": result, "message": message}
 
-@app.post("/prompt_llm_twins")
-async def prompt_llm_twins(prompt: prompt):
+@app.post("/callbacks")
+async def callbacks(prompt: prompt):
     # Get user from database
     profile = selectFromDB(conn, "llm_twins", "name", prompt.role)
 
     if profile is None:
         raise HTTPException(status_code = 404, detail = "Digital Twin for this user is not registered")
 
-    # Get intent from database
-    api_table = selectFromDB(conn, "llm_twins_api", "name", prompt.role)
-
-    if api_table is None:
-        raise HTTPException(status_code = 404, detail = "API table for this user is not registered")
-
+    # Run callback function
     dt = DigitalTwins()
-    result = dt.prompt_llm_twins(prompt.role, profile[1] ,prompt.message, api_table)
+    result = dt.callback(prompt.message)
 
     return {"result": result}
