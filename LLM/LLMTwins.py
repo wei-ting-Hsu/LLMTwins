@@ -19,7 +19,7 @@ def import_modules_from_directory(directory):
 
 class DigitalTwins:
     def __init__(self):
-        self.llm = ChatOpenAI(model = "gpt-4")
+        #self.llm = ChatOpenAI(model = "gpt-4")
         self.templates_profile = """你是{name}，{description}。"""
         self.api_intent = None
         self.api_table = None
